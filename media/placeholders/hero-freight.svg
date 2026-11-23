@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="100%" height="100%" fill="#141416"/>
+  <g stroke="#222226" stroke-width="1">
+    <line x1="0" y1="180" x2="1280" y2="180"/>
+    <line x1="0" y1="360" x2="1280" y2="360"/>
+    <line x1="0" y1="540" x2="1280" y2="540"/>
+    <line x1="320" y1="0" x2="320" y2="720"/>
+    <line x1="640" y1="0" x2="640" y2="720"/>
+    <line x1="960" y1="0" x2="960" y2="720"/>
+  </g>
+  <rect x="24" y="24" width="1232" height="672" fill="none" stroke="#2E2E34" stroke-width="1.5"/>
+  <circle cx="56" cy="56" r="5" fill="#C8F169"/>
+  <text x="74" y="61" fill="#C8F169" font-family="monospace" font-size="15" letter-spacing="1">NET_DEBUG :: RTT 142ms · LOSS 0%</text>
+  <text x="56" y="350" fill="#EDEBE6" font-family="sans-serif" font-weight="700" font-size="36">FREIGHT SIGNAL // 4P CO-OP RELAY</text>
+  <text x="56" y="388" fill="#9E9C96" font-family="monospace" font-size="18">Unity 2022 LTS · Netcode for GameObjects · Client Prediction</text>
+  <text x="56" y="672" fill="#6B6B6B" font-family="monospace" font-size="14">[REPLACE: Drop Unity MP4/WebM clip or screenshot in /public/media/]</text>
+</svg>

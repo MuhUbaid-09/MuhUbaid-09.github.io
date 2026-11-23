@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en" data-theme="acid"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="canonical" href="https://muhubaid-09.github.io/devlog/00-sample-draft/"><title>Sample Devlog (Draft) — Devlog</title><meta name="description" content="<!-- REPLACE: Set draft: false or add a new .md file in src/content/devlog/ to reveal the Devlog link in the navigation bar. -->"><!-- Open Graph / Social --><meta property="og:type" content="website"><meta property="og:url" content="https://muhubaid-09.github.io/devlog/00-sample-draft/"><meta property="og:title" content="Sample Devlog (Draft) — Devlog"><meta property="og:description" content="<!-- REPLACE: Set draft: false or add a new .md file in src/content/devlog/ to reveal the Devlog link in the navigation bar. -->"><meta property="og:image" content="/media/placeholders/hero-chronos.svg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Sample Devlog (Draft) — Devlog"><meta name="twitter:description" content="<!-- REPLACE: Set draft: false or add a new .md file in src/content/devlog/ to reveal the Devlog link in the navigation bar. -->"><meta name="twitter:image" content="/media/placeholders/hero-chronos.svg"><!-- Google Fonts: Space Grotesk, DM Sans, JetBrains Mono (display=swap) --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><!-- Restore persisted color palette immediately to prevent flash --><script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('portfolio-theme');
+          if (saved) document.documentElement.setAttribute('data-theme', saved);
+        } catch (e) {}
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CbpIL6Cv.js"></script><link rel="stylesheet" href="/_astro/_slug_.DnzIb_zN.css">
+<style>.devlog-post[data-astro-cid-uhaqmce5]{padding-block:var(--space-2xl);max-width:52rem;display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-xl)}.devlog-post__date[data-astro-cid-uhaqmce5]{color:var(--accent)}.devlog-post__title[data-astro-cid-uhaqmce5]{font-size:var(--text-h2);margin-top:var(--space-xs)}.devlog-post__content[data-astro-cid-uhaqmce5]{color:var(--text-secondary);line-height:1.7}
+</style></head> <body> <a class="skip-link" href="#main-content">Skip to main content</a> <!-- First-Visit Boot Screen & Persistent Custom Cursor --> <div class="boot-screen" id="boot-screen" aria-hidden="true" data-astro-cid-fko75tte> <div class="boot-screen__terminal mono" data-astro-cid-fko75tte> <p class="boot-line" id="boot-line-1" data-astro-cid-fko75tte>&gt; booting portfolio.exe</p> <p class="boot-line" id="boot-line-2" data-astro-cid-fko75tte>&gt; loading assets [<span id="boot-bar" data-astro-cid-fko75tte>----------</span>]</p> <p class="boot-line boot-line--ready" id="boot-line-3" data-astro-cid-fko75tte>&gt; ready</p> </div> </div> <!-- Self-contained, fail-safe inline boot script (never blocks the screen) --> <script>
+  (function () {
+    var bootEl = document.getElementById('boot-screen');
+    if (!bootEl) return;
+
+    function dismissImmediately() {
+      bootEl.style.display = 'none';
+      bootEl.remove();
+    }
+
+    try {
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var alreadyBooted = sessionStorage.getItem('portfolio-booted') === '1';
+
+      if (reduced || alreadyBooted) {
+        dismissImmediately();
+        return;
+      }
+
+      sessionStorage.setItem('portfolio-booted', '1');
+    } catch (e) {}
+
+    // Allow clicking anywhere on the boot screen to skip immediately
+    bootEl.addEventListener('click', dismissImmediately);
+
+    // Hard fail-safe: guarantee removal within 1.45s no matter what
+    var hardFallback = setTimeout(dismissImmediately, 1450);
+
+    var barEl = document.getElementById('boot-bar');
+    var line2 = document.getElementById('boot-line-2');
+    var line3 = document.getElementById('boot-line-3');
+
+    if (line2) line2.style.opacity = '0';
+    if (line3) line3.style.opacity = '0';
+
+    var steps = ['###-------', '######----', '##########'];
+
+    setTimeout(function () {
+      if (line2) line2.style.opacity = '1';
+    }, 100);
+
+    steps.forEach(function (step, idx) {
+      setTimeout(function () {
+        if (barEl) barEl.textContent = step;
+      }, 220 + idx * 140);
+    });
+
+    setTimeout(function () {
+      if (line3) line3.style.opacity = '1';
+    }, 680);
+
+    setTimeout(function () {
+      bootEl.classList.add('is-wiping');
+    }, 820);
+
+    setTimeout(function () {
+      clearTimeout(hardFallback);
+      dismissImmediately();
+    }, 1350);
+  })();
+</script>  <div class="custom-cursor" id="custom-cursor" aria-hidden="true" data-astro-transition-persist="astro-4adv5l3q-1"> <div class="custom-cursor__dot" id="custom-cursor-dot"></div> <div class="custom-cursor__ring" id="custom-cursor-ring"> <span class="custom-cursor__label mono" id="custom-cursor-label"></span> </div> </div>  <!-- Top 2px Scroll Progress Bar (driven by ScrollTrigger in Phase 3) --> <div class="scroll-progress-track" aria-hidden="true"> <div class="scroll-progress-bar" id="scroll-progress-bar"></div> </div> <header class="site-header" id="site-header" data-astro-cid-dmqpwcec> <div class="container nav-inner" data-astro-cid-dmqpwcec> <!-- Left: Developer Name --> <a href="/" class="nav-brand" data-magnetic data-scramble="Muhammad Ubaidillah" data-astro-cid-dmqpwcec> <span class="nav-brand__dot" aria-hidden="true" data-astro-cid-dmqpwcec></span> <span class="nav-brand__text" data-astro-cid-dmqpwcec>Muhammad Ubaidillah</span> </a> <!-- Right: Links, Resume download, Sound toggle --> <nav class="nav-right" aria-label="Primary" data-astro-cid-dmqpwcec> <ul class="nav-links" id="nav-links" data-astro-cid-dmqpwcec> <li data-astro-cid-dmqpwcec> <a href="/#work" class="nav-link" data-nav-key="work" data-magnetic data-scramble="Work" data-astro-cid-dmqpwcec>
+Work
+</a> </li> <li data-astro-cid-dmqpwcec> <a href="/#about" class="nav-link" data-nav-key="about" data-magnetic data-scramble="About" data-astro-cid-dmqpwcec>
+About
+</a> </li>  <li data-astro-cid-dmqpwcec> <a href="/#contact" class="nav-link" data-nav-key="contact" data-magnetic data-scramble="Contact" data-astro-cid-dmqpwcec>
+Contact
+</a> </li> </ul> <div class="nav-actions" data-astro-cid-dmqpwcec> <!-- Resume download button (mono "resume.pdf") --> <a href="/resume.pdf" download="resume.pdf" target="_blank" rel="noopener" class="nav-resume mono" data-magnetic aria-label="Download Resume PDF" data-astro-cid-dmqpwcec> <span data-astro-cid-dmqpwcec>resume.pdf</span> <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true" data-astro-cid-dmqpwcec> <path d="M8 2v8m0 0L5 7m3 3l3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" data-astro-cid-dmqpwcec></path> </svg> </a> <!-- Sound Toggle (OFF by default) --> <button type="button" class="nav-sound mono" id="sound-toggle" aria-pressed="false" aria-label="Toggle UI sound effects (currently off)" data-magnetic data-astro-cid-dmqpwcec> <span class="nav-sound__dot" aria-hidden="true" data-astro-cid-dmqpwcec></span> <span class="nav-sound__label" id="sound-toggle-label" data-astro-cid-dmqpwcec>SFX: OFF</span> </button> </div> </nav> </div> </header>  <div id="page-shake-wrapper"> <main id="main-content">  <article class="devlog-post container" data-astro-cid-uhaqmce5> <a href="/devlog" class="btn mono" data-astro-cid-uhaqmce5>&lt;- All devlogs</a> <header class="devlog-post__header" data-astro-cid-uhaqmce5> <span class="mono devlog-post__date" data-astro-cid-uhaqmce5>2026-01-15</span> <h1 class="devlog-post__title" data-astro-cid-uhaqmce5>Sample Devlog (Draft)</h1> </header> <div class="devlog-post__content" data-astro-cid-uhaqmce5> <!-- REPLACE: Write your devlog post in Markdown here. Because draft is set to true, the Devlog tab stays hidden from the navbar until you publish at least one post with draft: false. -->
+<p>This is a draft devlog post placeholder. Set <code>draft: false</code> in the frontmatter to publish it and automatically display the <strong>Devlog</strong> tab in the site navigation.</p> </div> </article>  </main> <footer class="site-footer" data-astro-cid-sz7xmlte> <div class="container footer-inner" data-astro-cid-sz7xmlte> <div class="footer-left" data-astro-cid-sz7xmlte> <button type="button" class="footer-logo mono" id="footer-easter-trigger" title="Click 5 times..." aria-label="Muhammad Ubaidillah — click 5 times for easter egg" data-astro-cid-sz7xmlte> <span class="footer-logo__bracket" data-astro-cid-sz7xmlte>[</span> <span data-astro-cid-sz7xmlte>Muhammad Ubaidillah</span> <span class="footer-logo__bracket" data-astro-cid-sz7xmlte>]</span> </button> <span class="footer-copy mono" data-astro-cid-sz7xmlte>© 2026 · Built with Astro + GSAP + Lenis</span> </div> <!-- Swappable Color Palette Selector (allows instant palette switching) --> <div class="footer-palettes" role="group" aria-label="Color palette selector" data-astro-cid-sz7xmlte> <span class="mono footer-palettes__label" data-astro-cid-sz7xmlte>palette:</span> <button type="button" class="palette-chip mono" data-theme-btn="acid" aria-label="Switch to Acid palette" data-astro-cid-sz7xmlte> <span class="palette-chip__swatch" style="background-color: #C8F169;" data-astro-cid-sz7xmlte></span> <span data-astro-cid-sz7xmlte>acid</span> </button><button type="button" class="palette-chip mono" data-theme-btn="amber" aria-label="Switch to Amber palette" data-astro-cid-sz7xmlte> <span class="palette-chip__swatch" style="background-color: #F59E0B;" data-astro-cid-sz7xmlte></span> <span data-astro-cid-sz7xmlte>amber</span> </button><button type="button" class="palette-chip mono" data-theme-btn="cobalt" aria-label="Switch to Cobalt palette" data-astro-cid-sz7xmlte> <span class="palette-chip__swatch" style="background-color: #38BDF8;" data-astro-cid-sz7xmlte></span> <span data-astro-cid-sz7xmlte>cobalt</span> </button><button type="button" class="palette-chip mono" data-theme-btn="crimson" aria-label="Switch to Crimson palette" data-astro-cid-sz7xmlte> <span class="palette-chip__swatch" style="background-color: #FF4D4D;" data-astro-cid-sz7xmlte></span> <span data-astro-cid-sz7xmlte>crimson</span> </button><button type="button" class="palette-chip mono" data-theme-btn="emerald" aria-label="Switch to Emerald palette" data-astro-cid-sz7xmlte> <span class="palette-chip__swatch" style="background-color: #22C55E;" data-astro-cid-sz7xmlte></span> <span data-astro-cid-sz7xmlte>emerald</span> </button> </div> </div> </footer> <script type="module">function o(){const a=document.querySelectorAll("[data-theme-btn]"),c=e=>{a.forEach(t=>{const n=t.dataset.themeBtn===e;t.classList.toggle("is-active",n),t.setAttribute("aria-pressed",String(n))})},s=document.documentElement.getAttribute("data-theme")||"acid";c(s),a.forEach(e=>{e.addEventListener("click",()=>{const t=e.dataset.themeBtn||"acid";document.documentElement.setAttribute("data-theme",t);try{localStorage.setItem("portfolio-theme",t)}catch{}c(t)})})}o();document.addEventListener("astro:page-load",o);</script>  </div> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.Kn-tO8Q1.js"></script> </body> </html>  
